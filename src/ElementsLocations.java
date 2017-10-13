@@ -1,10 +1,8 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.List;
 
-    public class ElementsLocations {
-        private WebDriver driver;
+public class ElementsLocations extends BrowserFunctions{
 
         public WebElement getFirstName(){
             return driver.findElement(By.id("name_3_firstname"));
@@ -18,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
             return driver.findElement(By.id("phone_9"));
         }
 
-        public WebElement Username(){
+        public WebElement getUsername(){
             return driver.findElement(By.id("username"));
         }
 
@@ -38,7 +36,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
             return driver.findElement(By.id("confirm_password_password_2"));
         }
 
-        public WebElement getYourProfilePictureButton(){
+        public WebElement getProfilePicture(){
             return driver.findElement(By.id("profile_pic_10"));
         }
 
@@ -46,4 +44,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
             return driver.findElement(By.name("pie_submit"));
         }
 
+        public WebElement getTemporaryEMail() {
+            return driver.findElement(By.id("inputEmail3"));
+        }
+
+        public List<WebElement> getHobbyCheckbox() {
+            return driver.findElements(By.name("checkbox_5[]"));
+        }
+
+        public List<WebElement> getMaritalStatus() {
+            return driver.findElements(By.name("radio_4[]"));
+        }
+
+        public WebElement getCountryList() {
+            return driver.findElement(By.id("dropdown_7"));
+        }
+
+        public WebElement getMonthList() {
+            return driver.findElement(By.id("mm_date_8"));
+        }
+        public WebElement getDayList() {
+            return driver.findElement(By.id("dd_date_8"));
+        }
+        public WebElement getYearList() {
+            return driver.findElement(By.id("yy_date_8"));
+        }
     }

@@ -2,18 +2,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.awt.*;
+
 public class Main {
-    public static void main(String[] args) throws InterruptedException{
-        ElementsLocations element = new ElementsLocations();
-        RandomGenerator generator = new RandomGenerator();
-        DriverInstance testing = new DriverInstance();
 
-        testing.openBrowser();
-        testing.waitUntilPageLoads();
+    public static WebDriver driver;
 
-       // element.getSubmitButton().click();
-        element.getFirstName().sendKeys(generator.getRandomString(25));
-        element.getLastName().sendKeys(generator.getRandomString(25));
-       // element.getPhoneNumber().sendKeys();
+    public static void main(String[] args) throws InterruptedException, AWTException {
+        driver = new FirefoxDriver();
+       MandatoryHappyPath mandatoryHappyPath = new MandatoryHappyPath();
+       NonMandatoryHappyPath nonMandatoryHappyPath = new NonMandatoryHappyPath();
+       RegisterValidation registerValidation = new RegisterValidation();
+
+       mandatoryHappyPath.MandatoryHappyPath();
+       nonMandatoryHappyPath.NonMandatoryHappyPath();
+      // registerValidation.RegisterValidation();
     }
 }
