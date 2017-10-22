@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,8 +13,13 @@ public class Main {
        NonMandatoryHappyPath nonMandatoryHappyPath = new NonMandatoryHappyPath();
        RegisterValidation registerValidation = new RegisterValidation();
 
+       //Runs all the methods from MandatoryHappyPath class.
        mandatoryHappyPath.MandatoryHappyPath();
+
+        //Runs all the methods from NonMandatoryHappyPath class.
        nonMandatoryHappyPath.NonMandatoryHappyPath();
-      // registerValidation.RegisterValidation();
+
+        //Runs all the methods from RegisterValidation class.
+       registerValidation.RegisterValidation();
     }
 }

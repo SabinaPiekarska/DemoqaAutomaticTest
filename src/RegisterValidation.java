@@ -1,10 +1,10 @@
 import org.openqa.selenium.By;
 
 public class RegisterValidation extends BrowserFunctions {
+
+    /* Method that clicks 'Submit' button and checks if proper after registration message is shown. */
     public void RegisterValidation() {
         ElementsLocations element = new ElementsLocations();
-        RandomGenerator generator = new RandomGenerator();
-        BrowserFunctions functions = new BrowserFunctions();
 
         element.getSubmitButton().click();
 
@@ -12,6 +12,5 @@ public class RegisterValidation extends BrowserFunctions {
             System.out.println("Rejestracja zakończyła się pomyślnie.");
         }
 
-        functions.closeTestingPage();
     }
 }

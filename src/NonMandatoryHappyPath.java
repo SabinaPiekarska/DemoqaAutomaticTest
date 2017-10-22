@@ -4,10 +4,8 @@ public class NonMandatoryHappyPath {
     public void NonMandatoryHappyPath () throws InterruptedException, AWTException {
         ElementsLocations element = new ElementsLocations();
         RandomGenerator generator = new RandomGenerator();
-        BrowserFunctions functions = new BrowserFunctions();
-        MandatoryHappyPath happyPath = new MandatoryHappyPath();
-        happyPath.MandatoryHappyPath();
 
+       //Fills all the non-mandatory fields with proper values.
         generator.randomClick(element.getMaritalStatus());
         generator.randomDropdownClick(element.getCountryList());
         generator.randomDropdownClick(element.getMonthList());

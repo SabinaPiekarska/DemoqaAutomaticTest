@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.List;
 
+// Class with web element locations from registration page.
 public class ElementsLocations extends BrowserFunctions{
 
         public WebElement getFirstName(){
@@ -45,7 +46,7 @@ public class ElementsLocations extends BrowserFunctions{
         }
 
         public WebElement getTemporaryEMail() {
-            return driver.findElement(By.id("inputEmail3"));
+            return driver.findElement(By.id("mail"));
         }
 
         public List<WebElement> getHobbyCheckbox() {
@@ -63,9 +64,11 @@ public class ElementsLocations extends BrowserFunctions{
         public WebElement getMonthList() {
             return driver.findElement(By.id("mm_date_8"));
         }
+
         public WebElement getDayList() {
             return driver.findElement(By.id("dd_date_8"));
         }
+
         public WebElement getYearList() {
             return driver.findElement(By.id("yy_date_8"));
         }

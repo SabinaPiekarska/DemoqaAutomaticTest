@@ -7,16 +7,19 @@ public class MandatoryHappyPath {
         RandomGenerator generator = new RandomGenerator();
         BrowserFunctions functions = new BrowserFunctions();
 
-        //Opening temporary e-mail page and copying mail name to String
+        //Opens temporary e-mail page, waits to load and copies mail name to String.
         functions.openTemporaryMailPage();
-        functions.waitUntilPageLoads(By.id("inputEmail3"));
+        functions.waitUntilPageLoads(By.id("mail"));
         String temporaryEMail = element.getTemporaryEMail().getAttribute("value");
 
-        //Opening testing page
+        //Opens testing page and waits to load.
         functions.openTestingPage();
         functions.waitUntilPageLoads(By.name("pie_submit"));
 
+        //Clicks 'Submit' button so all the mandatory fields are shown.
         element.getSubmitButton().click();
+
+        //Fills all the mandatory fields with proper values.
         element.getFirstName().sendKeys(generator.generateRandomWord(25));
         element.getLastName().sendKeys(generator.generateRandomWord(25));
         generator.randomClick(element.getHobbyCheckbox());
